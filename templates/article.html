@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+{% block body %}
+{% if data %}
+<h2 class="text-center">{{data.title}}</h2>
+<hr>
+<p><strong>Yazar:</strong> {{data.author}}</p><hr>
+<p><strong>Tarih:</strong> {{data.created_date}}</p>
+<hr>
+<div class="jumbotron">
+    {{data.content|safe}}
+</div>
+
+{% else %}
+<div class="alert alert-warning">Böyle bir makale bulunmuyor</div>
+{% endif %}
+
+
+
+{% endblock body%}
+
+
+
+
+
